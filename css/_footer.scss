@@ -1,0 +1,75 @@
+footer {
+	width: 100%;
+	height: 30vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 1em;
+	background: $colorPurple;
+	position: relative;
+	overflow: hidden;
+	h3 {
+		font-family: 'Pacifico', cursive;
+		color: $colorWhite;
+		font-size: 3em;
+	}
+	.socialMediaIcons {
+		width: 60%;
+		height: 100%;
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		align-items: center;
+		.icon {
+			margin: 5px;
+			text-decoration: none;
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			width: 3em;
+			height: 3em;
+			border: 1px solid $colorWhite;
+			i {
+				color: $colorWhite;
+				font-size: 1.25em;
+			}
+            &:hover{
+                box-shadow: $colorWhite 0px 05px 25px -12px;
+            }
+			&:nth-child(odd) {
+				background: $colorWhite;
+				i {
+					color: $colorPurple;
+				}
+			}
+		}
+	}
+
+	.line {
+		width: 1.5px;
+		height: 90%;
+		position: absolute;
+		background: $colorWhite;
+		transform: rotate(-50deg);
+		opacity: 0.2;
+		border-radius: 1px;
+	}
+	.line1 {
+		left: 03%;
+		top: -20%;
+	}
+	.line3 {
+		left: 40%;
+		top: 10%;
+	}
+	.line2 {
+		right: 15%;
+		top: 35%;
+		transform: rotate(90deg);
+	}
+	.line4 {
+		right: 0%;
+	}
+}

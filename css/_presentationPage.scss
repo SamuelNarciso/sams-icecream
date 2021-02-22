@@ -1,0 +1,244 @@
+.presentationPage {
+	background-image: url('../Assets/img/bg-icecream.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 2em;
+	position: relative;
+	header {
+		position: absolute;
+		right: 1em;
+		width: 50%;
+		.menu_list {
+			display: flex;
+			justify-content: space-evenly;
+			li {
+				list-style: none;
+				font-weight: 500;
+				a {
+					font-size: 1.12em;
+					color: $colorPurple;
+					text-decoration-style: wavy;
+					text-decoration-color: transparent;
+					&:hover {
+						text-decoration-color: $colorPurple;
+					}
+				}
+			}
+		}
+	}
+	.titles {
+		width: 100%;
+		height: 50%;
+		display: flex;
+		// justify-content: space-evenly;
+		align-items: center;
+		flex-direction: column;
+
+		.title {
+			margin-top: 0.8em;
+			font-family: 'Pacifico', cursive;
+			color: $colorDarkBlue;
+			font-size: 5em;
+		}
+		.subTitle {
+			color: $colorBlack;
+			opacity: 0.8;
+		}
+	}
+	.socialMedia {
+		position: absolute;
+		right: 1.5em;
+		top: 30%;
+		ul {
+			list-style: none;
+			li {
+				text-align: center;
+				width: 2.5em;
+				height: 2.5em;
+				border-radius: 50%;
+				border: 1px solid $colorBlack;
+				margin: 1em 0;
+				background: #d9e4e1e1;
+				transition: all ease-in-out .3s;
+				a {
+					color: $colorPurple;
+					font-size: 1.5em;
+				}
+				&:hover {
+					a {
+						color: $colorWhite;
+					}
+				}
+			}
+			.facebook:hover {
+				border: 1px solid  $colorDarkBlue;
+				background: $colorDarkBlue;
+			}
+			.instagram:hover {
+				border: 1px solid  #ba29d4b9;
+				background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+				// background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+			}
+			.twitter:hover {
+				border: 1px solid  #1f8ee9;
+				background:		   #1f8ee9;
+			}
+		}
+		&::after,
+		&::before {
+			border-radius: 1px;
+			opacity: 0.75;
+			position: absolute;
+			width: 1.5px;
+			height: 80%;
+			background: $colorPurple;
+			content: '';
+		}
+		&::before {
+			top: 100%;
+			right: 40%;
+		}
+		&::after {
+			right: 40%;
+			bottom: 100%;
+		}
+	}
+
+	.bg-decoration {
+		position: absolute;
+		font-size: 2.3em;
+		color: $colorDarkBlue;
+		opacity: 0.3;
+	}
+	.fa-ice-cream {
+		right: 70%;
+		top: 4em;
+		transform: rotate(-30deg);
+	}
+	.fa-dice-d6 {
+		right: 33%;
+		top: 7em;
+	}
+	.fa-snowflake {
+		right: 90%;
+		top: 12em;
+	}
+
+	.bg-decoration-line {
+		position: absolute;
+		width: 2.28px;
+		background: #fbfbfb;
+		height: 9em;
+		transform: rotate(-45deg);
+		border-radius: 1px;
+		opacity: 0.9;
+	}
+	.line1 {
+		top: 15%;
+		right: 15%;
+	}
+
+	.line2 {
+		top: 05%;
+		left: 10%;
+	}
+	.line3 {
+		top: 78%;
+		right: 05%;
+	}
+
+	.menu_bars {
+		position: absolute;
+		top: 02.5%;
+		right: 10%;
+		font-size: 2em;
+		
+		z-index: 6;
+		visibility: hidden;
+	}
+	.color_purple{
+		color: $colorPurple;
+	}
+	.color_purple{
+		color: $colorPurple;
+	}
+
+	.menu_bars_circle {
+		position: absolute;
+		z-index: 5;
+		top: 0%;
+		right: 07.5%;
+		width: 4em;
+		height: 4em;
+		border-radius: 50%;
+		//  background-color: #D9AFD9;
+		//  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+		background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+
+		// background: $colorWhite;
+		cursor: pointer;
+		transition: all ease-in-out 0.3s;
+	}
+	.expandir_menu_bars {
+		border-radius: 0;
+		width: 100%;
+		height: 100%;
+		right: 0%;
+	}
+	.oculto {
+		visibility: hidden;
+	}
+	.menuList_inCircle {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		height: 100%;
+
+		li {
+			list-style: none;
+			a {
+				font-size: 2.5em;
+				font-weight: 300;
+				text-decoration: none;
+				color: $colorPurple;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 1000px) {
+		header {
+			width: 60%;
+		}
+	}
+	@media screen and (max-width: 800px) {
+		header {
+			width: 60%;
+		}
+		.menu_list {
+			visibility: hidden;
+		}
+		.menu_bars {
+			visibility: visible;
+		}
+		.titles {
+			text-align: center;
+		}
+	}
+	@media screen and (max-width: 400px) {
+		.titles {
+			.title {
+				font-size: 4em;
+			}
+			.subTitle {
+				font-size: 1em;
+			}
+		}
+	}
+}

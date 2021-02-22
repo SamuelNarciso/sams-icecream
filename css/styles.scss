@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Pacifico&display=swap');
+$colorPurple: #4d375d;
+$colorDarkBlue: #1a508b;
+$colorBlack: #222831;
+$colorWhite: #f4f9f9;
+// font-family: 'Pacifico', cursive;
+// font-family: 'Noto Sans JP', sans-serif;
+* {
+	font-family: 'Noto Sans JP', sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	word-wrap: break-word;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	.container {
+		width: 100%;
+		height: 100%;
+		.singlePage {
+			background: $colorWhite;
+			width: 100%;
+			height: 100%;
+			overflow-x: hidden;
+		}
+		@import 'presentationPage';
+		@import 'aboutPage';
+		@import 'thirdPage';
+		@import 'footer';
+	}
+}
